@@ -1,0 +1,81 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+def rand():
+  ar = ["Rock", "Paper", "Scissors"]
+  return ar[random.randint(0, 2)]
+
+print("ASCII art by Veronica Karlsson")
+
+
+while True:
+  rps = input("Rock, Paper, or Scissors? ")
+  computer = rand()
+  if rps == "Rock":
+    print(rock)
+    if computer == "Rock":
+      print("Computer Chooses: Rock")
+      print(rock)
+      print("TIE")
+    elif computer == 'Scissors':
+      print("Computer Chooses: Scissors")
+      print(scissors)
+      print("You WIN")
+    else:
+      print("Computer Chooses: Paper")
+      print(paper)
+      print("You Lose")
+  elif rps == "Scissors":
+    print(scissors)
+    if computer == "Rock":
+      print("Computer Chooses: Rock")
+      print(rock)
+      print("You Lose")
+    elif computer == 'Scissors':
+      print("Computer Chooses: Scissors")
+      print(scissors)
+      print("TIE")
+    else:
+      print("Computer Chooses: Paper")
+      print(paper)
+      print("You WIN")
+  else:
+    print(paper)
+    if computer == "Rock":
+      print("Computer Chooses: Rock")
+      print(rock)
+      print("You WIN")
+    elif computer == 'Scissors':
+      print("Computer Chooses: Scissors")
+      print(scissors)
+      print("You lose")
+    else:
+      print("Computer Chooses: Paper")
+      print(paper)
+      print("TIE")
+  print("New Game")
+    
