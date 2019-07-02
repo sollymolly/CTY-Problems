@@ -1,0 +1,21 @@
+import random
+greet = ["Greetings...", "Welcome...", "You have come here to die...", "Hi.......", "Hello!"]
+death = ["Your Future if bright, my friend", "YOU SHALL DIE A GREAT DEATH, MY WARRIOR", "YOU ROBBER GET OUT OF MY HOUSE RIGHT NOW.", "You will live an old and healthy life."]
+names = []
+while True:
+  print(greet[random.randint(0, 4)])
+  print("Let's see your future, shall we?")
+  name = input("First off, what is your name? ")
+  if name in names:
+    print("You ALREADY CAME. GET OUT OR ELSE I WILL KILL YOU")
+    break
+  else:
+    names.append(name)
+  print(death[random.randint(0, 3)])
+  ag = input("Would you like to play again? ")
+  if 'yes' == ag:
+    print("okay")
+  else:
+    print("I hate you.")
+    break
+print("Bye.")
