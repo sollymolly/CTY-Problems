@@ -1,0 +1,18 @@
+days = ["Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth"]
+phrases = ["Twelve drummers drumming", "Eleven pipers piping", "Ten lords a leaping", "Nine ladies dancing", "Eight maids a milking", "Seven swans a swimming", "Six geese a laying", "Five golden rings", "Four calling birds", "Three French hens", "Two turtle doves", "And a Partridge in a pear tree"]
+
+print("On the first day of Christmas")
+print("my true love sent to me:")
+print("A Partridge in a pear tree.")
+print("\n")
+ind = 0
+l = 11
+s = 1
+while ind < 11:
+  print("On the {} day of Christmas".format(days[ind]))
+  print("my true love sent to me:")
+  for i in range(l-s, l+1):
+    print(phrases[i])
+  print("\n")
+  s += 1
+  ind += 1
