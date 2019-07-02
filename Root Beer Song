@@ -1,0 +1,11 @@
+num = 99
+while num != 0:
+  print('{} bottles of root beer on the fridge,'.format(num))
+  print("{} bottles of root beer".format(num))
+  print("Take one down and pass it around,")
+  print("\n")
+  num -= 1
+print('No more bottles of root beer on the fridge,')
+print("No more bottles of root beer,")
+print("Go to the store and buy some more")
+print("99 bottles of root beer on the fridge.")
