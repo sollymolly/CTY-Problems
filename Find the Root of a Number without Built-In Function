@@ -1,0 +1,37 @@
+'''
+The code's algorithm first starts with checking if the number is an integer, because we need an integer for our roots, for our sanity. After that, we check if the number we are square rooting is either 1 or 0. On both, we say that the answer is 1 or 0, respectively. If the number is not 1 or 0, we start by finding the closest square root of the perfect square. Note: We don't use any of the sqrt functions... we just check the numbers from 1, 2, 3, .... n - 1, n. After that, we go to our main body code. We constantly add 0.1 to the number we just found (the square root of the closest perfect square), until the number*number is greater than the main number. Then, we subtract our number/answer (the square root of the closest perfect square) by 0.1. Then, we divide the interval by 10, which makes is 0.01. We repeat this process until there is 10 numbers after the decimal, and then we get our answer. If our answer was a negative, we just added i after the number, symbolizing that is was an imaginary number.
+'''
+
+def length(x):
+  stri = str(x)
+  dec = stri.index(".")
+  return len(stri[dec+1:])
+def solve(n):
+  if n != int(n):
+    return "Only integers..."
+  x = 0
+  interval = 0.1
+  rnd = 1
+  a = ''
+  if n < 0:
+    a='i'
+    n=abs(n)
+  elif n == 1:
+    return 1
+  elif n == 0:
+    return 0
+  for i in range(1, n+1):
+    if i * i > n:
+      x = i - 1
+      break
+  if x * x == n:
+    return x
+  x += interval
+  while length(x) < 10:
+    if x * x > n:
+      x = round(x - interval, rnd)
+      interval /= 10
+      rnd += 1
+    x = round(x + interval, rnd)
+  return str(x)+a
+print(solve(194))
