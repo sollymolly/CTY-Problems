@@ -1,0 +1,21 @@
+print("Bitmap: ", end='')
+ar = input().split()
+b = ''
+new = []
+an, n = '', ''
+for i in range(len(ar)):
+    b = bin(int(ar[i]))
+    b = b[2:]
+    new.append('0'*(8-len(b)) + b)
+for j in range(len(new)):
+    an = str(new[j])
+    for i in range(len(an)):
+        if an[i] == '1':
+            n += '@'
+        else:
+            n += '-'
+    print(n)
+    n = ''
+            
+    
+
